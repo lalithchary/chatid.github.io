@@ -1,0 +1,119 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>discover telegram bot chat id</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            margin: 0;
+            padding: 20px;
+            background-color: #f5f5f5;
+        }
+        .container {
+            max-width: 800px;
+            margin: 0 auto;
+            background-color: white;
+            padding: 30px;
+            border-radius: 8px;
+            box-shadow: 0 2px 4px rgba(0,0,0,0.1);
+        }
+        h1 {
+            color: #333;
+            text-align: center;
+            margin-bottom: 10px;
+        }
+        .description {
+            font-size: 14px;
+            color: #666;
+            font-style: italic;
+            text-align: center;
+            margin-bottom: 30px;
+        }
+        .chat-id {
+            font-size: 24px;
+            font-weight: bold;
+            color: #007bff;
+            text-align: center;
+            margin: 20px 0;
+            padding: 20px;
+            background-color: #f8f9fa;
+            border-radius: 4px;
+            border: 1px solid #dee2e6;
+        }
+        .error {
+            font-size: 16px;
+            color: #dc3545;
+            text-align: center;
+            margin: 20px 0;
+        }
+        .instructions {
+            background-color: #e7f3ff;
+            padding: 15px;
+            border-radius: 4px;
+            margin: 20px 0;
+            border-left: 4px solid #007bff;
+        }
+        .instructions h3 {
+            margin-top: 0;
+            color: #004085;
+        }
+        .instructions p {
+            margin: 5px 0;
+            color: #212529;
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <h1>discover telegram bot chat id</h1>
+        
+        <div class="description">
+            send message to bot in your telegram to get the chat ID, it can be done by adding bot in to group chat and send message in that group
+        </div>
+
+        <div class="chat-id" id="chatId">
+            Your Telegram Bot Chat ID will appear here
+        </div>
+
+        <div class="error" id="error"></div>
+
+        <div class="instructions">
+            <h3>How to Get Your Bot Chat ID</h3>
+            <p>1. Add the bot to a Telegram group</p>
+            <p>2. Send a message in that group</p>
+            <p>3. The bot will respond with the chat ID</p>
+        </div>
+
+        <script>
+            // Function to update chat ID
+            function updateChatId(chatId) {
+                document.getElementById('chatId').textContent = chatId;
+                document.getElementById('chatId').style.color = '#007bff';
+                document.getElementById('error').textContent = '';
+            }
+
+            // Function to show error
+            function showError(error) {
+                document.getElementById('error').textContent = error;
+                document.getElementById('chatId').textContent = 'Error occurred';
+                document.getElementById('chatId').style.color = '#dc3545';
+            }
+
+            // Simulate getting chat ID (in a real implementation, this would come from Telegram API)
+            function getChatId() {
+                // For demo purposes, we'll use a placeholder
+                // In a real app, you would integrate with Telegram API
+                setTimeout(() => {
+                    // Simulate successful response
+                    updateChatId('123456789');
+                }, 1000);
+            }
+
+            // Initialize
+            getChatId();
+        </script>
+    </div>
+</body>
+</html>
